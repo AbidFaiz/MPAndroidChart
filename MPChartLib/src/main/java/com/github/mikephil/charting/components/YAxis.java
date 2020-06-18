@@ -71,7 +71,7 @@ public class YAxis extends AxisBase {
     /**
      * the position of the y-labels relative to the chart
      */
-    private YAxisLabelPosition mPosition = YAxisLabelPosition.OUTSIDE_CHART;
+    private YAxisLabelPosition mPosition = YAxisLabelPosition.LEFT;
 
     /**
      * the horizontal offset of the y-label
@@ -82,7 +82,7 @@ public class YAxis extends AxisBase {
      * enum for the position of the y-labels relative to the chart
      */
     public enum YAxisLabelPosition {
-        OUTSIDE_CHART, INSIDE_CHART
+        LEFT,OUTSIDE_CHART, INSIDE_CHART
     }
 
     /**
@@ -382,7 +382,7 @@ public class YAxis extends AxisBase {
      */
     public boolean needsOffset() {
         if (isEnabled() && isDrawLabelsEnabled() && getLabelPosition() == YAxisLabelPosition
-                .OUTSIDE_CHART)
+                .LEFT)
             return true;
         else
             return false;
